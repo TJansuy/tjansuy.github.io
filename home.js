@@ -15,7 +15,7 @@ const createElements = (links) => {
 };
 const links = [
     ["My github", "https://github.com/TJansuy"],
-    ["Nyan Cat", "https://www.youtube.com/watch?v=jIQ6UV2onyI"],
+    ["My LinkedIn", "https://www.linkedin.com/in/trixi-jansuy/"],
     ["", ""],
 ];
 createElements(links);
