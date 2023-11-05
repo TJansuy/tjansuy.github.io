@@ -8,6 +8,7 @@ const createElements = (links) => {
             element.setAttribute("href", val[1]);
             let container = document.createElement("div");
             container.appendChild(element);
+            container.setAttribute("class", "Link");
             root?.appendChild(container);
         }
     });
