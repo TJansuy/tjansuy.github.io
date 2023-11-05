@@ -12,4 +12,4 @@ const links = [
     ["My github", "https://github.com/TJansuy"],
     ["", ""],
 ];
-createElements(links);
+document?.onload(createElements(links));
