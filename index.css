@@ -4,3 +4,8 @@
     align-items: center;
     padding-top: 5rem;   
 }
+
+.Link {
+    padding: 1rem;
+    border-radius: 1rem;
+}

@@ -5,8 +5,10 @@ const createElements = (links: string[][]) => {
             let element = document.createElement("a");
             element.appendChild(document.createTextNode(val[0]));
             element.setAttribute("href", val[1]);
+
             let container = document.createElement("div");
             container.appendChild(element);
+            container.setAttribute("class", "Link")
             root?.appendChild(container);
         }
     })
