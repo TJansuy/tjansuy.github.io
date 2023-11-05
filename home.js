@@ -1,7 +1,7 @@
 "use strict";
 const createElements = (links) => {
     const root = document.getElementById("LinkContainer");
-    links.map((val, index) => {
+    links.map((val) => {
         let element = document.createElement("a");
         element.appendChild(document.createTextNode(val[0]));
         element.setAttribute("href", val[1]);
