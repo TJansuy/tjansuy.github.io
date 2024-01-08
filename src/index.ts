@@ -30,7 +30,6 @@ const parseQrLink = (value: qrLink): HTMLElement => {
             const container = document.createElement('div');
             container.setAttribute('class', 'QR-Code');
             container.appendChild(qr);
-            container.appendChild(element);
 
             element.appendChild(container);
         } catch (ignored) {
