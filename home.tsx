@@ -54,13 +54,13 @@ const createElements = (links: qrLink[]): void => {
 
 const links = [
     {
-        text: "My github", 
-        link: "https://github.com/TJansuy",
-    },
-    {
         text: "My LinkedIn", 
         link: "https://www.linkedin.com/in/trixi-jansuy/",
-        QRType1
+        qr: QRType1
+    },
+    {
+        text: "My github", 
+        link: "https://github.com/TJansuy",
     },
 ];
 
