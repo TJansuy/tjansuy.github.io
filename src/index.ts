@@ -14,11 +14,12 @@ const QRType1: qrType = {
 
 const parseQrLink = (value: qrLink): HTMLElement => {
     // Construct the clickable Link element
-    let element: HTMLElement = document.createElement('a');
-    element.appendChild(document.createTextNode(value.text));
-    element.setAttribute('href', value.link);
-    element.setAttribute('id', '')
-    
+    let element: HTMLElement = document.createElement('div');
+    const anchor = document.createElement('a');
+    anchor.appendChild(document.createTextNode(value.text));
+    anchor.setAttribute('href', value.link);
+    anchor.setAttribute('id', '')
+    element.appendChild(anchor)
     // If there are QR Options, attempt to create a QR Code.
     if (value?.qr) {
         try {
@@ -31,7 +32,7 @@ const parseQrLink = (value: qrLink): HTMLElement => {
             container.appendChild(qr);
             container.appendChild(element);
 
-            element = container;
+            element.insertBefore(anchor, container);
         } catch (ignored) {
             // Oh well
             console.log('Unable to create QR Code!: ' + ignored)
