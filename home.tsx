@@ -14,9 +14,10 @@ const QRType1: qrType = {
 
 const parseQrLink = (value: qrLink): HTMLElement => {
     // Construct the clickable Link element
-    let element: HTMLElement = document.createElement("a");
+    let element: HTMLElement = document.createElement('a');
     element.appendChild(document.createTextNode(value.text));
-    element.setAttribute("href", value.link);
+    element.setAttribute('href', value.link);
+    element.setAttribute('id', '')
     
     // If there are QR Options, attempt to create a QR Code.
     if (value?.qr) {
@@ -41,12 +42,12 @@ const parseQrLink = (value: qrLink): HTMLElement => {
 }
 
 const createElements = (links: qrLink[]): void => {
-    const root = document.getElementById("LinkContainer")
+    const root = document.getElementById('LinkContainer')
     links.map((val: qrLink) => {
         if (val.text && val.link) {
-            const container = document.createElement("div");
+            const container = document.createElement('div');
             container.appendChild(parseQrLink(val));
-            container.setAttribute("class", "Link")
+            container.setAttribute('class', 'Link')
             root?.appendChild(container);
         }
     })
@@ -54,14 +55,16 @@ const createElements = (links: qrLink[]): void => {
 
 const links = [
     {
-        text: "My LinkedIn", 
-        link: "https://www.linkedin.com/in/trixi-jansuy/",
+        text: 'My LinkedIn', 
+        link: 'https://www.linkedin.com/in/trixi-jansuy/',
         qr: QRType1
     },
     {
-        text: "My github", 
-        link: "https://github.com/TJansuy",
+        text: 'My github', 
+        link: 'https://github.com/TJansuy',
     },
 ];
 
-createElements(links)
+document.addEventListener('DOMContentLoaded', () => {
+    createElements(links);
+})
