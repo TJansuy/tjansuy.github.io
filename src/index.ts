@@ -19,7 +19,7 @@ const parseQrLink = (value: qrLink): HTMLElement => {
     anchor.appendChild(document.createTextNode(value.text));
     anchor.setAttribute('href', value.link);
     anchor.setAttribute('id', '')
-    element.appendChild(anchor)
+    
     // If there are QR Options, attempt to create a QR Code.
     if (value?.qr) {
         try {
@@ -32,13 +32,13 @@ const parseQrLink = (value: qrLink): HTMLElement => {
             container.appendChild(qr);
             container.appendChild(element);
 
-            element.insertBefore(anchor, container);
+            element.appendChild(container);
         } catch (ignored) {
             // Oh well
             console.log('Unable to create QR Code!: ' + ignored)
         }
     }
-
+    element.appendChild(anchor)
     return element;
 }
 
