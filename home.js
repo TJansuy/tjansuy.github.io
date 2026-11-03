@@ -18,9 +18,8 @@ const Links = [
     { content: 'Github',
         href: 'https://github.com/TJansuy',
         style: 'github' },
-    { content: 'Claude Tests',
-        href: '/testing-Claude',
-
+    { content: 'Testing Claude',
+        href: '/testing-Claude'
     }
 ];
 const createElements = (links) => __awaiter(void 0, void 0, void 0, function* () {
