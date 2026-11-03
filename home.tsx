@@ -10,6 +10,9 @@ const Links = [
     {content: 'Github', 
     href: 'https://github.com/TJansuy',
     style: 'github'},
+    {content: 'Testing Claude',
+        href: '/testing-Claude'
+    }
 ];
 
 type LinksType = {content: string, href?: string, qr?:{height: number, width: number}, style?: string};

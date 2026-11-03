@@ -1,0 +1,3 @@
+[submodule "testing-Claude"]
+	path = testing-Claude
+	url = https://github.com/TJansuy/testing-Claude
