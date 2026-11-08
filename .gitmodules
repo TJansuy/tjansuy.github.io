@@ -1,3 +1,4 @@
 [submodule "testing-Claude"]
 	path = testing-Claude
 	url = https://github.com/TJansuy/testing-Claude
+	branch = git-commit-author-config-fvjlk7
